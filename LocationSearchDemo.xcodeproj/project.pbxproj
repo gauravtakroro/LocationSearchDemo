@@ -15,7 +15,6 @@
 		93D0F7B52A7FC8EB00BA8357 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D0F7B42A7FC8EB00BA8357 /* HomeViewModel.swift */; };
 		93D0F7B92A7FCCC800BA8357 /* LocationSearchBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D0F7B82A7FCCC800BA8357 /* LocationSearchBottomView.swift */; };
 		93D0F7BB2A7FCE5700BA8357 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D0F7BA2A7FCE5700BA8357 /* LocationSearchViewModel.swift */; };
-		93D0F7BD2A7FCF7F00BA8357 /* LocationSearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D0F7BC2A7FCF7F00BA8357 /* LocationSearchItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +27,6 @@
 		93D0F7B42A7FC8EB00BA8357 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		93D0F7B82A7FCCC800BA8357 /* LocationSearchBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchBottomView.swift; sourceTree = "<group>"; };
 		93D0F7BA2A7FCE5700BA8357 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
-		93D0F7BC2A7FCF7F00BA8357 /* LocationSearchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +99,6 @@
 			children = (
 				93D0F7B82A7FCCC800BA8357 /* LocationSearchBottomView.swift */,
 				93D0F7BA2A7FCE5700BA8357 /* LocationSearchViewModel.swift */,
-				93D0F7BC2A7FCF7F00BA8357 /* LocationSearchItem.swift */,
 			);
 			path = LocationSearchBottomUi;
 			sourceTree = "<group>";
@@ -180,7 +177,6 @@
 				93D0F7A52A7FAD0200BA8357 /* ContentView.swift in Sources */,
 				93D0F7A32A7FAD0200BA8357 /* LocationSearchDemoApp.swift in Sources */,
 				93D0F7BB2A7FCE5700BA8357 /* LocationSearchViewModel.swift in Sources */,
-				93D0F7BD2A7FCF7F00BA8357 /* LocationSearchItem.swift in Sources */,
 				93D0F7B52A7FC8EB00BA8357 /* HomeViewModel.swift in Sources */,
 				93D0F7B92A7FCCC800BA8357 /* LocationSearchBottomView.swift in Sources */,
 			);

@@ -11,7 +11,9 @@ struct LocationSearchBottomView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @StateObject var locationSearchViewModel: LocationSearchViewModel
     @Binding var clickedLocationName: String
-   
+    @Binding var clickedLocationCoordinatesLat: Double
+    @Binding var clickedLocationCoordinatesLng: Double
+    
     var body: some View {
         
         VStack {
@@ -47,7 +49,11 @@ struct LocationSearchBottomView: View {
                         VStack(alignment: .leading, spacing: 10) {
                             Button {
                                 clickedLocationName = locations[index].title
-                                mode.wrappedValue.dismiss()
+                                locationSearchViewModel.performSearchForLatLng(inputValue: clickedLocationName, completionHandler: {
+                                    self.clickedLocationCoordinatesLat = locationSearchViewModel.clickedLocationLat
+                                    self.clickedLocationCoordinatesLng = locationSearchViewModel.clickedLocationLng
+                                    mode.wrappedValue.dismiss()
+                                })
                             } label: {
                                 HStack {
                                     Image("marker")

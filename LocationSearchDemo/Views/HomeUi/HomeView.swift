@@ -12,21 +12,21 @@ struct HomeView: View {
      var body: some View {
         VStack {
             if homeViewModel.locationName.isEmpty == false {
-                Text("Clicked Location is \(homeViewModel.locationName)").font(.system(size: 24))
+                Text("Clicked Location is \(homeViewModel.locationName)").font(.system(size: 20))
             }
             if homeViewModel.locationName.isEmpty == false {
-                Text("\(homeViewModel.locationName) Latitude : \(homeViewModel.locationCoordinatesLat) and Longitude : \(homeViewModel.locationCoordinatesLng) ").font(.system(size: 20))
+                Text("Latitude : \(homeViewModel.locationCoordinatesLat) and Longitude : \(homeViewModel.locationCoordinatesLng) ").font(.system(size: 16))
             }
             Button {
                 // button action
                 homeViewModel.moveToLocationSearchView  = true
             } label: {
                 Text("Search New Location ").font(.system(size: 24)).underline().bold()
-            }
+            }.padding(.top, 16)
         } .sheet(isPresented: $homeViewModel.moveToLocationSearchView, onDismiss: {
             
         }, content: {
-            LocationSearchBottomView( locationSearchViewModel: LocationSearchViewModel(), clickedLocationName: self.$homeViewModel.locationName)
+            LocationSearchBottomView(locationSearchViewModel: LocationSearchViewModel(), clickedLocationName: self.$homeViewModel.locationName, clickedLocationCoordinatesLat: self.$homeViewModel.locationCoordinatesLat, clickedLocationCoordinatesLng: self.$homeViewModel.locationCoordinatesLng)
                 .padding(.top)
         })
         .padding()
