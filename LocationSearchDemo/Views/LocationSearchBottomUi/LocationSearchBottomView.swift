@@ -11,12 +11,18 @@ struct LocationSearchBottomView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @StateObject var locationSearchViewModel: LocationSearchViewModel
     @Binding var clickedLocationName: String
-   // @Binding var clickedLocationCoordinatesLat: Double
-   // @Binding var clickedLocationCoordinatesLng: Double
    
     var body: some View {
         
         VStack {
+            HStack {
+                Spacer()
+                Button {
+                    mode.wrappedValue.dismiss()
+                } label: {
+                    Image("icon_cross")
+                }.frame(alignment: .trailing)
+            }.frame(maxWidth: .infinity).frame(alignment: .trailing)
             HStack {
                 Image("icon-search")
                 TextField("Search Location", text: $locationSearchViewModel.input)
@@ -28,7 +34,8 @@ struct LocationSearchBottomView: View {
                     .onChange(of: locationSearchViewModel.input) { newValue in
                         locationSearchViewModel.findSearch(searchText: newValue)
                     }.padding(.leading, -10)
-            }
+            }.padding(.top, 16)
+            
             Rectangle()
                 .frame(height: 1)
                 .foregroundColor(Color.gray).opacity(0.3)

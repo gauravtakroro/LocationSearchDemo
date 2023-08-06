@@ -25,7 +25,7 @@ class LocationSearchViewModel: NSObject, LocationSearchViewModelProtocol {
     
     func findSearch(searchText: String) {
         
-        searchCompleter.queryFragment = searchText
+        searchCompleter.queryFragment = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }
 
