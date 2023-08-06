@@ -11,7 +11,7 @@ import MapKit
 protocol LocationSearchViewModelProtocol: ObservableObject {
     var input: String { get set }
     func findSearch(searchText: String)
-    func performSearchForLatLng(inputValue: String, completionHandler: @escaping () -> Swift.Void)
+    func getLatLngUsingLocationTitle(inputValue: String, completionHandler: @escaping () -> Swift.Void)
     var clickedLocationLat: Double { get set }
     var clickedLocationLng: Double { get set }
 }
@@ -43,7 +43,7 @@ extension LocationSearchViewModel: MKLocalSearchCompleterDelegate {
 }
 
 extension LocationSearchViewModel {
-    func performSearchForLatLng(inputValue: String, completionHandler: @escaping () -> Swift.Void) {
+    func getLatLngUsingLocationTitle(inputValue: String, completionHandler: @escaping () -> Swift.Void) {
         let searchRequest = MKLocalSearch.Request()
         searchRequest.naturalLanguageQuery = inputValue
 

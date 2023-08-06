@@ -49,7 +49,7 @@ struct LocationSearchBottomView: View {
                         VStack(alignment: .leading, spacing: 10) {
                             Button {
                                 clickedLocationName = locations[index].title
-                                locationSearchViewModel.performSearchForLatLng(inputValue: clickedLocationName, completionHandler: {
+                                locationSearchViewModel.getLatLngUsingLocationTitle(inputValue: clickedLocationName, completionHandler: {
                                     self.clickedLocationCoordinatesLat = locationSearchViewModel.clickedLocationLat
                                     self.clickedLocationCoordinatesLng = locationSearchViewModel.clickedLocationLng
                                     mode.wrappedValue.dismiss()
